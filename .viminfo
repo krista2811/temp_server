@@ -11,10 +11,10 @@
 $
 
 # Command Line History (newest to oldest):
-:wq
-:Wq
 :q
+:wq
 :!q
+:Wq
 :sq
 :Q
 :'<,'>
@@ -42,52 +42,54 @@ $
 		});
 	};
 ""1	LINE	0
-							
+	#API
 "2	LINE	0
+	
+"3	LINE	0
+	##GET
+"4	LINE	0
+							
+"5	LINE	0
 								data[contact].contactID == req.body.contactID) {
 							result.push(data[contact]);
-"3	LINE	0
+"6	LINE	0
 					for(var contact in data){
 						if(data[contact].facebook_key == req.params.facebook_key &&
-"4	LINE	0
+"7	LINE	0
 					var deleteIDsStr = '[]';
 					var deleteIDs = JSON.parse(deleteIDsStr);
-"5	LINE	0
+"8	LINE	0
 					var resultStr = '[]';
 					var result = JSON.parse(resultStr);
-"6	LINE	0
+"9	LINE	0
 						return res.status(500).json({error: "db failure"});
 					}
-"7	LINE	0
-				/*Contact.find(function(err, data) {
-					if(err) {
-"8	LINE	0
-							deleteIDs.push(data[contact].contactID);
-"9	LINE	0
-							delete data[contact];
-						}
 "-	CHAR	0
 	e
 
 # File marks:
-'0  4  12  ~/.gitignore
-'1  1  0  ~/add
-'2  3  7  ~/.gitignore
-'3  2  6  ~/.gitignore
-'4  1  5  ~/.gitignore
-'5  57  1  ~/router/index.js
-'6  45  22  ~/router/index.js
-'7  30  12  ~/router/index.js
-'8  28  28  ~/router/index.js
-'9  28  3  ~/router/index.js
+'0  5  12  ~/.gitignore
+'1  57  1  ~/router/index.js
+'2  2  0  ~/README.md
+'3  4  12  ~/.gitignore
+'4  1  0  ~/add
+'5  3  7  ~/.gitignore
+'6  2  6  ~/.gitignore
+'7  1  5  ~/.gitignore
+'8  45  22  ~/router/index.js
+'9  30  12  ~/router/index.js
 
 # Jumplist (newest first):
+-'  5  12  ~/.gitignore
+-'  6  7  ~/.gitignore
+-'  57  1  ~/router/index.js
+-'  2  0  ~/README.md
+-'  1  0  ~/README.md
 -'  4  12  ~/.gitignore
 -'  3  7  ~/.gitignore
 -'  1  0  ~/add
 -'  2  6  ~/.gitignore
 -'  1  5  ~/.gitignore
--'  57  1  ~/router/index.js
 -'  45  22  ~/router/index.js
 -'  30  12  ~/router/index.js
 -'  28  28  ~/router/index.js
@@ -175,25 +177,19 @@ $
 -'  1  0  ~/data/user.json
 -'  87  0  ~/router/main.js
 -'  1  23  ~/server.js
--'  10  28  ~/package.json
--'  7  25  ~/package.json
--'  8  23  ~/server.js
--'  8  11  ~/package.json
--'  57  1  ~/router/index.js
 
 # History of marks within files (newest to oldest):
 
 > ~/.gitignore
-	"	4	12
-	^	4	13
-	.	4	12
+	"	5	12
+	^	5	13
+	.	5	13
 	+	1	6
 	+	2	9
 	+	3	8
-	+	4	12
-
-> ~/add
-	"	1	0
+	+	4	13
+	+	6	8
+	+	5	13
 
 > ~/router/index.js
 	"	57	1
@@ -300,6 +296,29 @@ $
 	+	56	0
 	+	56	0
 	o	1	0
+
+> ~/README.md
+	"	34	36
+	^	34	37
+	.	35	0
+	+	35	0
+	+	8	5
+	+	18	75
+	+	17	4
+	+	7	3
+	+	17	3
+	+	27	6
+	+	10	19
+	+	14	26
+	+	30	5
+	+	21	11
+	+	30	4
+	+	22	3
+	+	32	18
+	+	35	0
+
+> ~/add
+	"	1	0
 
 > ~/app.js
 	"	20	34

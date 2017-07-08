@@ -2,3 +2,5 @@
 .config/*
 *my-app*
 *node-module*
+.bash_history*
+.viminfo*

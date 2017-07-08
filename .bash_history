@@ -438,3 +438,38 @@ vim log_error.txt
 ls
 vim app.js 
 git init
+ls
+node app.js 
+mongo
+cd router/
+ls
+vim index.js 
+cd ..
+node app.js 
+vim app.js 
+ls
+vim app.js 
+cd rou
+cd router/
+ls
+vim main.js 
+cd ..
+node app.js 
+cd router/
+vim main.js 
+ls
+rm index.js 
+rm main.js 
+cd ..
+node app.js 
+vim app.js 
+node app.js 
+vim app.js 
+ls
+npm install
+node app.js 
+.module.js
+vim .module.js
+node app.js 
+mongo
+node app.js 
