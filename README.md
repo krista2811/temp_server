@@ -16,8 +16,7 @@ GET ('/api/contacts/:facebook_key)
 	...
 ]
 ```
-  
-	  
+
 POST ('/api/contacts/:facebook_key)
 * require:
 ```
@@ -30,8 +29,21 @@ POST ('/api/contacts/:facebook_key)
 	}
 ]
 ```
-* recieve:
-`{return: num}`
+* recieve:  
+`{return: num}`  
+
+DELETE ('/api/contacts/:facebook_key)
+* require:
+```
+[
+	{
+		"contactID": String
+	}
+	...
+]
+```
+* recieve:  
+'{return: num}`
 
 
 
