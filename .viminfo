@@ -42,39 +42,49 @@ $
 		});
 	};
 ""1	LINE	0
-						}
+								return res.status(404).json({error: "no contact"});
 "2	LINE	0
-						}else{
+								}
+								if(data.length == 0) {
 "3	LINE	0
-							contact.facebook_key = " ";
+								else {	
 "4	LINE	0
-						if(req.params.facebook_key == null){
+				res.json(test);
 "5	LINE	0
-						contact.facebook_key = " ";
+				var test = JSON.parse(testStr);
 "6	LINE	0
-						contact.contactID = " ";
+				var testStr = '[]';
 "7	LINE	0
-						contact.name = " ";
+								test.push(data[0]);
 "8	LINE	0
-						contact.phoneNum = " ";
+						}
 "9	LINE	0
-	
+						}else{
 "-	CHAR	0
 	e
 
 # File marks:
-'0  48  8  ~/router/index.js
-'1  36  6  ~/router/index.js
-'2  26  38  ~/router/index.js
-'3  26  30  ~/router/index.js
-'4  28  4  ~/router/index.js
-'5  23  22  ~/router/index.js
-'6  24  26  ~/router/index.js
-'7  1  0  ~/router/index.js
-'8  62  5  ~/router/index.js
-'9  63  19  ~/router/index.js
+'0  80  7  ~/router/index.js
+'1  101  9  ~/router/index.js
+'2  97  10  ~/router/index.js
+'3  77  31  ~/router/index.js
+'4  76  24  ~/router/index.js
+'5  89  48  ~/router/index.js
+'6  81  23  ~/router/index.js
+'7  98  6  ~/router/index.js
+'8  102  3  ~/router/index.js
+'9  101  41  ~/router/index.js
 
 # Jumplist (newest first):
+-'  80  7  ~/router/index.js
+-'  101  9  ~/router/index.js
+-'  97  10  ~/router/index.js
+-'  77  31  ~/router/index.js
+-'  76  24  ~/router/index.js
+-'  89  48  ~/router/index.js
+-'  81  23  ~/router/index.js
+-'  98  6  ~/router/index.js
+-'  102  3  ~/router/index.js
 -'  48  8  ~/router/index.js
 -'  36  6  ~/router/index.js
 -'  26  38  ~/router/index.js
@@ -88,7 +98,7 @@ $
 -'  69  24  ~/router/index.js
 -'  65  58  ~/router/index.js
 -'  66  8  ~/router/index.js
--'  71  0  ~/router/index.js
+-'  104  0  ~/router/index.js
 -'  70  1  ~/router/index.js
 -'  1  0  ~/README.md
 -'  34  36  ~/README.md
@@ -142,8 +152,8 @@ $
 -'  7  22  ~/router/testIndex.js
 -'  26  2  ~/app.js
 -'  1  0  ~/log_error.txt
--'  123  0  ~/router/index.js
--'  75  1  ~/router/index.js
+-'  156  0  ~/router/index.js
+-'  108  1  ~/router/index.js
 -'  9  21  ~/.vimrc
 -'  1  0  ~/c
 -'  8  0  ~/
@@ -152,70 +162,23 @@ $
 -'  2  0  ~/app.js
 -'  86  0  ~/router/main.js
 -'  71  0  ~/router/main.js
--'  111  5  ~/router/index.js
+-'  144  5  ~/router/index.js
 -'  12  51  ~/models/book.js
 -'  687  0  ~/jellybeans.vim
 -'  1  0  ~/jellybeans.vim
 -'  11  0  ~/.vimrc
 -'  1  0  ~/log_create.txt
--'  104  58  ~/router/index.js
--'  113  5  ~/router/index.js
--'  76  5  ~/router/index.js
--'  98  1  ~/router/index.js
--'  82  0  ~/router/index.js
--'  96  22  ~/router/index.js
--'  14  0  ~/app.js
--'  1  0  ~/models/book.js
--'  1  0  ~/app.js
--'  50  28  ~/router/main.js
--'  54  3  ~/router/main.js
--'  15  3  ~/router/main.js
--'  1  31  ~/router/main.js
--'  32  6  ~/router/index.js
+-'  137  58  ~/router/index.js
+-'  146  5  ~/router/index.js
+-'  109  5  ~/router/index.js
+-'  131  1  ~/router/index.js
+-'  115  0  ~/router/index.js
 
 # History of marks within files (newest to oldest):
 
 > ~/router/index.js
-	"	48	8
-	^	48	9
-	.	46	5
-	+	21	45
-	+	22	3
-	+	22	35
-	+	26	3
-	+	28	3
-	+	35	3
-	+	36	3
-	+	43	3
-	+	48	3
-	+	49	3
-	+	50	3
-	+	51	3
-	+	52	3
-	+	53	3
-	+	53	10
-	+	54	7
-	+	55	3
-	+	26	4
-	+	28	4
-	+	35	4
-	+	36	4
-	+	43	4
-	+	28	27
-	+	35	48
-	+	36	52
-	+	43	49
-	+	21	34
-	+	28	32
-	+	35	28
-	+	36	32
-	+	43	29
-	+	54	0
-	+	56	24
-	+	48	29
-	+	21	24
-	+	21	37
-	+	54	24
+	"	80	7
+	.	80	0
 	+	22	40
 	+	54	0
 	+	21	24
@@ -279,6 +242,43 @@ $
 	+	37	38
 	+	42	44
 	+	46	5
+	+	103	0
+	+	75	26
+	+	80	18
+	+	75	23
+	+	83	7
+	+	81	28
+	+	101	42
+	+	102	3
+	+	72	7
+	+	72	13
+	+	72	33
+	+	81	23
+	+	81	8
+	+	98	8
+	+	101	4
+	+	101	17
+	+	80	14
+	+	81	7
+	+	81	7
+	+	98	7
+	+	81	23
+	+	80	26
+	+	81	0
+	+	89	48
+	+	76	24
+	+	101	16
+	+	72	0
+	+	101	3
+	+	77	31
+	+	80	23
+	+	81	12
+	+	97	10
+	+	81	0
+	+	84	7
+	+	101	9
+	+	78	32
+	+	80	0
 	o	1	0
 
 > ~/README.md
