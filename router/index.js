@@ -20,12 +20,30 @@ module.exports = function(app, Contact) {
 	app.post('/api/contacts/:facebook_key', function(req, res) {
 			for(var reqContact in req.body) {
 				var contact = new Contact();
+					/**
+					 *after initialization
+					 */
 					contact.facebook_key = req.params.facebook_key;
-					contact.contactID = req.body[reqContact].contactID;
-					contact.name = req.body[reqContact].name;
+					if(req.body[reqContact].contactID != null) {
+						contact.contactID = req.body[reqContact].contactID;
+					} else {
+						contact.contactID = "";
+					}
+					if(req.body[reqContact].name == null){
+						contact.name = "";
+					} else {
+						contact.name = req.body[reqContact].name;
+					}
+					if(req.body[reqContact].phoneNum != null) {
 					contact.phoneNum = req.body[reqContact].phoneNum;
+					} else {
+						contact.phoneNum = "";
+					}
+					if(req.body[reqContact].email != null) {
 					contact.email = req.body[reqContact].email;
-			
+					} else {
+						contact.email = "";
+					}
 
 				contact.save(function(err) {
 						if(err) {
