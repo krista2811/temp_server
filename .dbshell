@@ -1,0 +1,92 @@
+use mongodb_tutorial
+db
+show dbs
+db.book.insert({"name": "MongoDB Tutorial", "author": "velopert"});
+show dbs
+use mongodb_tutorial
+db.dropDatabase();
+use test
+db.createCollection("books")
+db.createCollection("articles", { capped: true, autoIndex: true, size: 6142800, max: 10000 })
+db.people.insert({"name": "velopert"})
+show collections
+show dbs
+db.books.insert({"name": "NodeJS Guide", "author": "Veloport"})
+db.books.insert([ {"name": "Book1", "author": "Veloport"}, {"name": "Book2", "author": "Velopert"} ]};
+db.books.insert([ {"name": "Book1", "author": "Veloport"}, {"name": "Book2", "author": "Velopert"} ]);
+db.books.find();
+quit
+db.collections(0 sdfq );
+db.collections();
+db.collections.find();
+show db
+show collections
+show dbs
+use mongodb_tutorial
+show mongodb_tutorial
+show.connections
+show.connetion
+show collections
+quit
+show dbs
+use main
+db.createCollection(1)
+db.createCollection("1")
+db.deleteCollection("1")
+db.1.drop()
+db."1".drop()
+show colections
+show collections
+db.1.drop()
+db.1.drop();
+use testdb
+db.createCollection("user")
+db.user.insert({"contactID": "123", "name": "Alice", "phoneNum": "010-2223-3322", "email": "iAmAlice@naver.com" })
+db.user.find()
+db.user.find().pretty()
+db.createCollection("myGallaxy")
+db.myGallaxy.insert([ {"contactID": "223", "name": "Betty", "phoneNum": "010-2233-1122", "email": "bettyWetty@kaist.ac.kr" }, {"contactID": "11", "name": "Candy", "phoneNum": "010-2222-2222", "email": "beetyKim@kaist.ac.kr" }])
+db.myGallaxy.find()
+db.myGallaxy.find().pretty()
+show dbs
+show dbs
+use testdb
+show collections
+db.myGallaxy.find()
+db.myGallaxy.find().pretty()
+show collections
+show dbs
+use mongodb_tutorial
+show collections
+use testdb
+show collections
+show dbs
+use testdb
+ls
+show collections
+db.collections.find(0  sdf a)
+db.collections.find().pretty()
+db.myGallaxy.find().pretty()
+use
+use testdb
+db.createCollection(myGallaxy)
+db.createCollection(myGallaxy);
+ls
+show collections
+db.contacts.find().pretty()
+use testdb
+use testdb
+ls
+show collections
+db.contacts.drop()
+show collections
+db.contacts.save({ "facebook_key": "krista", "contactID": "112", "name": "Is" , "phoneNum": "010-2233-2211", "email": "kaistaa@naan.com" });
+db.contacts.find().pretty()
+use testdb
+show collections
+db.contacts.find().pretth()
+db.contacts.find().pretty()
+use testdb
+db.contacts.find().pretty()
+use testdb
+db.contacts.drop()
