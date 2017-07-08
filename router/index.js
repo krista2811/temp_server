@@ -68,4 +68,37 @@ module.exports = function(app, Contact) {
 			}
 			res.json({results: 1});
 	});
+	app.put('/api/contacts/:facebook_key', function(req, res) {
+			for(var contactID in req.body) {
+				Contact.find({contactID: req.body[contactID].contactID,
+					facebook_key: req.params.facebook_key},
+						function(err, data) {
+							console.log(data);
+							console.log(data.length);
+							if(err || data.length == 0) {
+							return res.status(500).json({error: "db failure"});
+							}
+							var contact = data[0];
+							if(req.body[contactID].name){
+								contact.name = req.body[contactID].name;
+							}
+							if(req.body[contactID].phoneNum){
+								contact.phoneNum = req.body[contactID].phoneNum;
+							}
+							if(req.body[contactID].email){
+								contact.email = req.body[contactID].email;
+							}
+
+							contact.save(function(err) {
+									if(err){
+										return res.status(500)
+										.json({error: "fail tu update"});
+									}
+							});
+							
+				});
+			}
+			return res.json({message: "contact updated"});
+	});
+
 };
