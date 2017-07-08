@@ -15,13 +15,6 @@ module.exports = function(app, Contact) {
 						}
 					}
 					res.json(obj);
-					/*
-					for(var contact: contacts){
-						var jsonContact = JSON.parse(contact);
-						if(jsonContact.facebook_key == req.params.username) {
-							res.json(contact);
-						}
-					}*/
 			});
 	});
 	app.post('/api/contacts/:facebook_key', function(req, res) {
@@ -46,12 +39,15 @@ module.exports = function(app, Contact) {
 	});
 	
 	app.delete('/api/contacts/:facebook_key', function(req, res) {
-			Contact.remove({contactID: req.body.contactID},
-							{facebook_key: req.params.facebook_key},
-							function(err, output) {
-								if(err) return res.status(500).json(
-										{error: "db failure"})
-								res.status(204).end();
-			});
+			for(var contactID in req.body) {
+				Contact.remove({contactID: req.body[contactID].contactID,
+						facebook_key: req.params.facebook_key},
+							function(err) {
+								if(err) {
+								return res.status(500).json({error: "db failure"});
+								}
+				});
+			}
+			res.json({results: 1});
 	});
 };
