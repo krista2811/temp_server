@@ -2,7 +2,7 @@
 
 GET ('/api/contacts/:facebook_key)  
 * require:
-* recieve:  
+* response:
 ```
 [
 	{
@@ -29,9 +29,9 @@ POST ('/api/contacts/:facebook_key)
 	}
 ]
 ```
-* recieve:  
+* response:
 `{return: num}`  
-
+* if error found, num = 0 else, num = 1  
 DELETE ('/api/contacts/:facebook_key)
 * require:
 ```
@@ -42,8 +42,25 @@ DELETE ('/api/contacts/:facebook_key)
 	...
 ]
 ```
-* recieve:  
-'{return: num}`
+* response
+'{return: num}`  
+*if error found, num = 0 else, num = 1  
+
+PUT ('/api/contacts/:facebook_key)
+* require:
+```
+[
+	{
+		"contactID": String (necessary)
+		"name": String (unnecessary)
+		"email": String(unnecessary)
+		"phoneNum": String(unnecessary)
+	}
+]
+```
+* response:  
+`{message: "contact updated"}`
+* SHOULD NOT USE DIFFERENT contactID
 
 
 
