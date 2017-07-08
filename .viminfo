@@ -11,8 +11,8 @@
 $
 
 # Command Line History (newest to oldest):
-:q
 :wq
+:q
 :!q
 :Wq
 :sq
@@ -68,18 +68,21 @@ $
 	e
 
 # File marks:
-'0  5  12  ~/.gitignore
-'1  57  1  ~/router/index.js
-'2  2  0  ~/README.md
-'3  4  12  ~/.gitignore
-'4  1  0  ~/add
-'5  3  7  ~/.gitignore
-'6  2  6  ~/.gitignore
-'7  1  5  ~/.gitignore
-'8  45  22  ~/router/index.js
-'9  30  12  ~/router/index.js
+'0  34  38  ~/README.md
+'1  1  0  ~/README.txt
+'2  1  0  ~/READme.txt
+'3  5  12  ~/.gitignore
+'4  57  1  ~/router/index.js
+'5  2  0  ~/README.md
+'6  4  12  ~/.gitignore
+'7  1  0  ~/add
+'8  3  7  ~/.gitignore
+'9  2  6  ~/.gitignore
 
 # Jumplist (newest first):
+-'  34  38  ~/README.md
+-'  1  0  ~/README.txt
+-'  1  0  ~/READme.txt
 -'  5  12  ~/.gitignore
 -'  6  7  ~/.gitignore
 -'  57  1  ~/router/index.js
@@ -175,10 +178,69 @@ $
 -'  9  12  ~/package.json
 -'  10  0  ~/data/user.json
 -'  1  0  ~/data/user.json
--'  87  0  ~/router/main.js
--'  1  23  ~/server.js
 
 # History of marks within files (newest to oldest):
+
+> ~/README.md
+	"	34	38
+	^	34	39
+	.	34	38
+	+	35	0
+	+	8	5
+	+	18	75
+	+	17	4
+	+	7	3
+	+	17	3
+	+	27	6
+	+	10	19
+	+	14	26
+	+	30	5
+	+	21	11
+	+	30	4
+	+	22	3
+	+	32	18
+	+	35	0
+	+	7	4
+	+	17	5
+	+	22	4
+	+	30	5
+	+	4	34
+	+	5	16
+	+	6	11
+	+	7	6
+	+	17	7
+	+	16	8
+	+	15	7
+	+	7	7
+	+	8	6
+	+	9	20
+	+	10	21
+	+	11	26
+	+	12	25
+	+	13	22
+	+	14	28
+	+	18	77
+	+	20	35
+	+	21	11
+	+	22	8
+	+	23	7
+	+	24	27
+	+	25	26
+	+	26	23
+	+	27	21
+	+	28	7
+	+	29	9
+	+	30	8
+	+	31	11
+	+	32	19
+	+	33	74
+	+	34	38
+
+> ~/README.txt
+	"	1	0
+
+> ~/READme.txt
+	"	1	0
 
 > ~/.gitignore
 	"	5	12
@@ -296,26 +358,6 @@ $
 	+	56	0
 	+	56	0
 	o	1	0
-
-> ~/README.md
-	"	34	36
-	^	34	37
-	.	35	0
-	+	35	0
-	+	8	5
-	+	18	75
-	+	17	4
-	+	7	3
-	+	17	3
-	+	27	6
-	+	10	19
-	+	14	26
-	+	30	5
-	+	21	11
-	+	30	4
-	+	22	3
-	+	32	18
-	+	35	0
 
 > ~/add
 	"	1	0
