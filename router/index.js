@@ -1,4 +1,4 @@
-module.exports = function(app, Contact) {
+module.exports = function(app,Contact, Photo) {
 	app.get('/api/contacts/:facebook_key', function(req, res) {
 			Contact.find(function(err, data) {
 					if (err) {
@@ -93,12 +93,74 @@ module.exports = function(app, Contact) {
 									if(err){
 										return res.status(500)
 										.json({error: "fail tu update"});
-									}
+								}
 							});
 							
 				});
 			}
 			return res.json({message: "contact updated"});
 	});
+	var multer = require('multer');
+	var storage = multer.diskStorage({
+		destination: function(req, file, cb) {
+			cb(null, 'images/')
+		},
+		filename: function(req, file, cb) {
+			cb(null, file.originalname)
+		}
+	})
+	var upload = multer({ storage: storage });
+	app.post('/api/photos/:facebook_key', upload.single("userfile"), function(req, res)
+			{
+				var photo = new Photo();
+				photo.photoName = req.file.originalname;
+				photo.photoDir = req.file.path;
+				photo.thumbDir = req.file.path;
+				photo.facebook_key = req.params.facebook_key;
+				photo.save(function (err, data) {
+					if (err) {
+						return res.status(500).send({error: 'database failure'});
+					}
+			})
+			res.json({message:"All done"});
+			return;
 
+	});			
+	app.get('/api/photos/:facebook_key', function(req, res) {
+		Photo.find({facebook_key: req.params.facebook_key}, function(err, data) {
+				if(err){
+					return res.status(500).json({error: "db failure" });
+				}
+				var arrayStr = '[]';
+				var obj = JSON.parse(arrayStr);
+				for(var photo in data) {
+					obj.push(data[photo]);
+				}
+				res.json(obj);
+		});
+	});
+	app.delete('/api/photos/:facebook_key', function(req, res) {
+			var fs = require('fs');
+			for(var photoID in req.body) {
+				Photo.find({_id: req.body[photoID]._id,
+						facebook_key: req.params.facebook_key},
+						function(err, data) {
+						if(err){ 
+							return res.status(500).json({error: "db failure"});
+							}
+						for(var photo in data) {
+							fs.unlink(__dir + "/" +data[photo].photoDir);
+							fs.unlink(__dir + "/" + data[photo].thumbDir);
+						}
+				});
+				Photo.remove({_id: req.body[photoID]._id,
+						facebook_key: req.params.facebook_key},
+							function(err) {
+								if(err) {
+								return res.status(500).json({error: "db failure"});
+								}
+				});
+			}
+			res.json({results: 1});
+	});
 };

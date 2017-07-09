@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-
+var formidable = require('formidable');
 var db = mongoose.connection;
 db.on('error', console.error);
 db.once('open', function() {
@@ -13,14 +13,25 @@ db.once('open', function() {
 mongoose.connect('mongodb://localhost/testdb');
 
 var Contact = require('./models/contact');
-
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
-
+var Photo = require('./models/photo');
+app.set('views',__dirname + '/views');
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+/*app.get('/:fname', function(req, res) {
+		res.render('index', {
+			fName: req.params.fname
+		});
+});*/
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+app.use(express.static('.'));
 var port = process.env.PORT || 1234;
 
-var router = require('./router')(app, Contact);
+var router = require('./router')(app, Contact, Photo);
 
-var server = app.listen(port, function() {
+var server = app.listen(port, function(err) {
+		if(err){
+			console.error(err);
+		}
 		console.log("Express server has started on port " + port)
 });
