@@ -11,6 +11,7 @@
 $
 
 # Command Line History (newest to oldest):
+:q!
 :q
 :wq
 :!q
@@ -31,149 +32,187 @@ $
 
 # Registers:
 "0	CHAR	0
-	modules.exports = function(app, Contact) {
-		app.get('/api/contacts', function(req, res) {
-				Contact.find(function(err, myGallaxy) {
-						if (err) {
-							return res.status(500).send({error: 'database failure'});
-						}
-						res.json(myGallaxy);
-				});
-		});
-	};
+		fs.unlink(req.body[photoID].photoDir);
+									fs.unlink(req.body[photoID].thumbDir);
+					
 ""1	LINE	0
-						}
+									fs.unlink(req.body[photoID].thumbDir);
 "2	LINE	0
-						}else{
+									fs.unlink(req.body[photoID].photoDir);
 "3	LINE	0
-							contact.facebook_key = " ";
+					fs.unlink(req.body[photoID].thumbDir);
 "4	LINE	0
-						if(req.params.facebook_key == null){
+					fs.unlink(req.body[photoID].photoDir);
 "5	LINE	0
-						contact.facebook_key = " ";
+					console.log(req.body[photoID]._id);
 "6	LINE	0
-						contact.contactID = " ";
+					
 "7	LINE	0
-						contact.name = " ";
+				console.log(req.body);
 "8	LINE	0
-						contact.phoneNum = " ";
+					console.log(photoID);
 "9	LINE	0
-	
+						}
 "-	CHAR	0
-	e
+	o
 
 # File marks:
-'0  48  8  ~/router/index.js
-'1  36  6  ~/router/index.js
-'2  26  38  ~/router/index.js
-'3  26  30  ~/router/index.js
-'4  28  4  ~/router/index.js
-'5  23  22  ~/router/index.js
-'6  24  26  ~/router/index.js
-'7  1  0  ~/router/index.js
-'8  62  5  ~/router/index.js
-'9  63  19  ~/router/index.js
+'0  25  0  ~/app.js
+'1  1  0  ~/router/testIndex.js
+'2  1  0  ~/router/index.js
+'3  1  0  ~/router/app.js
+'4  12  51  ~/models/book.js
+'5  10  5  ~/client.js
+'6  153  6  ~/router/index.js
+'7  162  4  ~/router/index.js
+'8  163  41  ~/router/index.js
+'9  143  24  ~/router/index.js
 
 # Jumplist (newest first):
+-'  25  0  ~/app.js
+-'  1  0  ~/router/testIndex.js
+-'  1  0  ~/router/index.js
+-'  1  0  ~/router/app.js
+-'  12  51  ~/models/book.js
+-'  10  5  ~/client.js
+-'  153  6  ~/router/index.js
+-'  162  4  ~/router/index.js
+-'  163  41  ~/router/index.js
+-'  143  24  ~/router/index.js
+-'  156  24  ~/router/index.js
+-'  165  3  ~/router/index.js
+-'  137  10  ~/router/index.js
+-'  119  30  ~/router/index.js
+-'  110  2  ~/router/index.js
+-'  109  3  ~/router/index.js
+-'  114  3  ~/router/index.js
+-'  125  5  ~/router/index.js
+-'  126  14  ~/router/index.js
+-'  23  4  ~/app.js
+-'  7  16  ~/models/photo.js
+-'  12  17  ~/models/photo.js
+-'  107  3  ~/router/index.js
+-'  111  1  ~/router/index.js
+-'  103  16  ~/router/index.js
+-'  30  9  ~/client.js
+-'  2  11  ~/client.js
+-'  1  0  ~/client.js
+-'  132  1  ~/router/index.js
+-'  4  39  ~/app.js
+-'  18  0  ~/app.js
+-'  5  0  ~/app.js
+-'  26  14  ~/app.js
+-'  1  0  ~/app.js
+-'  27  33  ~/test.js
+-'  29  34  ~/test.js
+-'  1  0  ~/test.js
+-'  29  34  ~/app.js
+-'  130  4  ~/router/index.js
+-'  112  43  ~/router/index.js
+-'  6  38  ~/app.js
+-'  24  2  ~/app.js
+-'  1  0  ~/router/in
+-'  16  4  ~/server.js
+-'  13  4  ~/server.js
+-'  9  45  ~/server.js
+-'  7  15  ~/views/index.ejs
+-'  8  0  ~/my-app
+-'  19  4  ~/server.js
+-'  14  25  ~/server.js
+-'  10  16  ~/server.js
+-'  22  4  ~/server.js
+-'  7  38  ~/server.js
+-'  15  11  ~/server.js
+-'  8  0  ~/server.js
+-'  6  6  ~/index.ejs
+-'  1  0  ~/index.ejs
+-'  9  21  ~/index.html
+-'  28  2  ~/app.js
+-'  71  2  ~/router/index.js
+-'  7  1  ~/index.html
+-'  11  6  ~/index.html
+-'  23  2  ~/server.js
+-'  85  0  ~/router/index.js
+-'  24  17  ~/server.js
+-'  10  5  ~/views/index.ejs
+-'  8  5  ~/views/index.ejs
+-'  1  0  ~/views/index.
+-'  8  0  ~/views
+-'  1  0  ~/views
+-'  1  0  ~/photo/twice.jpg
+-'  102  3  ~/router/index.js
+-'  80  7  ~/router/index.js
+-'  19  26  ~/app.js
+-'  2  0  ~/models/photo.js
+-'  2  0  ~/models/contact.js
+-'  11  18  ~/models/contact.js
+-'  1  0  ~/models/photo.js
+-'  37  0  ~/server.js
+-'  5  17  ~/server.js
+-'  21  34  ~/app.js
+-'  1  0  ~/views/index.ejs
+-'  101  9  ~/router/index.js
+-'  97  10  ~/router/index.js
+-'  77  31  ~/router/index.js
+-'  76  24  ~/router/index.js
+-'  89  48  ~/router/index.js
+-'  81  23  ~/router/index.js
+-'  98  6  ~/router/index.js
 -'  48  8  ~/router/index.js
 -'  36  6  ~/router/index.js
 -'  26  38  ~/router/index.js
 -'  28  4  ~/router/index.js
 -'  23  22  ~/router/index.js
--'  24  26  ~/router/index.js
--'  62  5  ~/router/index.js
--'  1  0  ~/router/index.js
--'  63  19  ~/router/index.js
--'  61  19  ~/router/index.js
--'  69  24  ~/router/index.js
--'  65  58  ~/router/index.js
--'  66  8  ~/router/index.js
--'  71  0  ~/router/index.js
--'  70  1  ~/router/index.js
--'  1  0  ~/README.md
--'  34  36  ~/README.md
--'  1  0  ~/README.txt
--'  1  0  ~/READme.txt
--'  5  12  ~/.gitignore
--'  6  7  ~/.gitignore
--'  2  0  ~/README.md
--'  4  12  ~/.gitignore
--'  3  7  ~/.gitignore
--'  1  0  ~/add
--'  2  6  ~/.gitignore
--'  1  5  ~/.gitignore
--'  56  22  ~/router/index.js
--'  21  28  ~/router/index.js
--'  43  28  ~/router/index.js
--'  50  25  ~/router/index.js
--'  67  5  ~/router/index.js
--'  58  0  ~/router/index.js
--'  20  34  ~/app.js
--'  25  0  ~/app.js
--'  15  0  ~/app.js
--'  15  6  ~/router/index.js
--'  11  18  ~/models/contact.js
--'  1  20  ~/models/contact.js
--'  12  18  ~/router/index.js
--'  13  17  ~/router/index.js
--'  14  19  ~/router/index.js
--'  53  31  ~/router/index.js
--'  44  2  ~/router/index.js
--'  17  5  ~/router/index.js
--'  10  21  ~/router/index.js
--'  7  5  ~/router/index.js
--'  6  5  ~/router/index.js
--'  5  20  ~/models/contact.js
--'  9  27  ~/router/index.js
--'  18  7  ~/router/index.js
--'  19  3  ~/router/index.js
--'  3  3  ~/router/index.js
--'  12  0  ~/models/contact.js
--'  47  5  ~/router/index.js
--'  22  29  ~/app.js
--'  13  39  ~/models/contact.js
--'  57  3  ~/router/index.js
--'  1  0  ~/models/contac
--'  1  0  ~/router/testIndex.js
--'  10  1  ~/router/testIndex.js
--'  21  0  ~/app.js
--'  24  2  ~/app.js
--'  3  13  ~/router/testIndex.js
--'  7  22  ~/router/testIndex.js
--'  26  2  ~/app.js
--'  1  0  ~/log_error.txt
--'  123  0  ~/router/index.js
--'  75  1  ~/router/index.js
--'  9  21  ~/.vimrc
--'  1  0  ~/c
--'  8  0  ~/
--'  1  0  ~/
--'  5  17  ~/server.js
--'  2  0  ~/app.js
--'  86  0  ~/router/main.js
--'  71  0  ~/router/main.js
--'  111  5  ~/router/index.js
--'  12  51  ~/models/book.js
--'  687  0  ~/jellybeans.vim
--'  1  0  ~/jellybeans.vim
--'  11  0  ~/.vimrc
--'  1  0  ~/log_create.txt
--'  104  58  ~/router/index.js
--'  113  5  ~/router/index.js
--'  76  5  ~/router/index.js
--'  98  1  ~/router/index.js
--'  82  0  ~/router/index.js
--'  96  22  ~/router/index.js
--'  14  0  ~/app.js
--'  1  0  ~/models/book.js
--'  1  0  ~/app.js
--'  50  28  ~/router/main.js
--'  54  3  ~/router/main.js
--'  15  3  ~/router/main.js
--'  1  31  ~/router/main.js
--'  32  6  ~/router/index.js
+-'  127  3  ~/router/index.js
 
 # History of marks within files (newest to oldest):
+
+> ~/app.js
+	"	25	0
+	.	25	0
+	+	39	0
+	+	1	0
+	+	6	0
+	+	13	57
+	+	15	36
+	+	31	29
+	+	13	43
+	+	15	38
+	+	31	44
+	+	2	1
+	+	29	34
+	+	15	1
+	+	15	83
+	+	15	99
+	+	16	0
+	+	15	0
+	+	29	34
+	+	27	0
+	+	16	38
+	+	31	51
+	+	32	0
+	+	33	45
+	+	36	2
+	+	28	0
+	+	22	0
+	+	23	0
+	+	22	1
+	+	23	1
+	+	22	2
+	+	24	2
+	+	6	38
+	+	25	27
+	+	26	0
+	+	25	38
+	+	26	0
+	+	29	34
+	+	25	14
+	+	26	14
+	+	5	0
+	+	25	17
+	+	26	17
+	+	4	39
+	+	25	0
 
 > ~/router/index.js
 	"	48	8
@@ -385,28 +424,6 @@ $
 
 > ~/add
 	"	1	0
-
-> ~/app.js
-	"	20	34
-	^	20	35
-	.	20	34
-	+	27	0
-	+	1	0
-	+	6	0
-	+	13	57
-	+	15	36
-	+	22	29
-	+	13	43
-	+	15	38
-	+	22	44
-	+	2	1
-	+	20	34
-	+	15	1
-	+	15	83
-	+	15	99
-	+	16	0
-	+	15	0
-	+	20	34
 
 > ~/models/contact.js
 	"	11	18

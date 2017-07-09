@@ -474,3 +474,22 @@ node app.js
 mongo
 node app.js 
 node app.js 
+ls
+mongo
+ls
+vim client.js 
+cd models/
+ls
+vim book.js 
+cd ./
+cd ../
+ls
+cd router/
+ls
+vim app.js 
+vim index.js 
+ls
+vi testIndex.js 
+cd ../
+ls
+vim app.js 
