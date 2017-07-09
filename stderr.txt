@@ -1,0 +1,15 @@
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+/home/ubuntu/node_modules/express/lib/express.js:107
+      throw new Error('Most middleware (like ' + name + ') is no longer bundled with Express and must be installed separately. Please see https://github.com/senchalabs/connect#middleware.');
+      ^
+
+Error: Most middleware (like bodyParser) is no longer bundled with Express and must be installed separately. Please see https://github.com/senchalabs/connect#middleware.
+    at Function.Object.defineProperty.get (/home/ubuntu/node_modules/express/lib/express.js:107:13)
+    at Object.<anonymous> (/home/ubuntu/app.js:25:16)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Function.Module.runMain (module.js:442:10)
+    at startup (node.js:136:18)
+    at node.js:966:3

@@ -1,0 +1,110 @@
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+Express server has started on port 1234
+Connected to mongod server
+[ { _id: 5961018633c5db45f05c9b66,
+    email: '',
+    phoneNum: '333-333',
+    name: 'Asasasaa',
+    contactID: '9',
+    facebook_key: '113152139314660' } ]
+1
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[ { _id: 596110b178940b46fc6ded63,
+    email: '',
+    phoneNum: '333-333',
+    name: 'Asasasaa',
+    contactID: '11',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b65,
+    email: '',
+    phoneNum: '333-333',
+    name: 'Asasasaa',
+    contactID: '7',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded64,
+    email: '',
+    phoneNum: '333-333',
+    name: 'Asasasaa',
+    contactID: '1',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded65,
+    email: '',
+    phoneNum: '333-333',
+    name: 'Asasasaa',
+    contactID: '3',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b66,
+    email: '',
+    phoneNum: '333-3',
+    name: 'Ascasxsx',
+    contactID: '9',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b65,
+    email: '',
+    phoneNum: '333-3',
+    name: 'Ascasxsx',
+    contactID: '7',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded63,
+    email: '',
+    phoneNum: '333-3',
+    name: 'Ascasxsx',
+    contactID: '11',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded64,
+    email: '',
+    phoneNum: '333-3',
+    name: 'Ascasxsx',
+    contactID: '1',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b66,
+    email: '',
+    phoneNum: '222-5555',
+    name: 'Asc',
+    contactID: '9',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b65,
+    email: '',
+    phoneNum: '222-5555',
+    name: 'Asc',
+    contactID: '7',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded63,
+    email: '',
+    phoneNum: '222-5555',
+    name: 'Asc',
+    contactID: '11',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b66,
+    email: '',
+    phoneNum: '1144-444-444',
+    name: 'Wwwwwwww',
+    contactID: '9',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b65,
+    email: '',
+    phoneNum: '1144-444-444',
+    name: 'Wwwwwwww',
+    contactID: '7',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b66,
+    email: '',
+    phoneNum: '1111',
+    name: 'Ssssssssss',
+    contactID: '9',
+    facebook_key: '113152139314660' } ]
+1
+error: Forever detected script was killed by signal: SIGKILL

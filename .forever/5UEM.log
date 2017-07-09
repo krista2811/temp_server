@@ -1,0 +1,129 @@
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+Express server has started on port 1234
+Connected to mongod server
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[ { _id: 5960fdda9011c544e79dea29,
+    email: '',
+    phoneNum: '333-333',
+    name: 'Asasasaa',
+    contactID: '5',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded63,
+    email: '',
+    phoneNum: '1144-444-444',
+    name: 'Wwwwwwww',
+    contactID: '11',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded65,
+    email: '',
+    phoneNum: '333-3',
+    name: 'Ascasxsx',
+    contactID: '3',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b65,
+    email: '',
+    phoneNum: '1111',
+    name: 'Ssssssssss',
+    contactID: '7',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b66,
+    email: '',
+    phoneNum: '(222) 222-2222',
+    name: 'New',
+    contactID: '9',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded64,
+    email: '',
+    phoneNum: '222-5555',
+    name: 'Asc',
+    contactID: '1',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b66,
+    email: '',
+    phoneNum: '010-6619-9032',
+    name: '정석원',
+    contactID: '9',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5960fdda9011c544e79dea29,
+    email: '',
+    phoneNum: '010-6619-9032',
+    name: '정석원',
+    contactID: '5',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 5961018633c5db45f05c9b65,
+    email: '',
+    phoneNum: '010-6619-9032',
+    name: '정석원',
+    contactID: '7',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded63,
+    email: '',
+    phoneNum: '010-6619-9032',
+    name: '정석원',
+    contactID: '11',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded64,
+    email: '',
+    phoneNum: '010-6619-9032',
+    name: '정석원',
+    contactID: '1',
+    facebook_key: '113152139314660' } ]
+1
+[ { _id: 596110b178940b46fc6ded65,
+    email: '',
+    phoneNum: '010-6619-9032',
+    name: '정석원',
+    contactID: '3',
+    facebook_key: '113152139314660' } ]
+1
+yeah
+false
+_http_outgoing.js:335
+    throw new Error('Can\'t set headers after they are sent.');
+    ^
+
+Error: Can't set headers after they are sent.
+    at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:335:11)
+    at ServerResponse.writeHead (_http_server.js:180:21)
+    at /home/ubuntu/router/index.js:117:10
+    at IncomingForm.<anonymous> (/home/ubuntu/node_modules/formidable/lib/incoming_form.js:105:9)
+    at emitNone (events.js:67:13)
+    at IncomingForm.emit (events.js:166:7)
+    at IncomingForm._maybeEnd (/home/ubuntu/node_modules/formidable/lib/incoming_form.js:553:8)
+    at /home/ubuntu/node_modules/formidable/lib/incoming_form.js:230:12
+    at WriteStream.<anonymous> (/home/ubuntu/node_modules/formidable/lib/file.js:74:5)
+    at WriteStream.g (events.js:260:16)
+    at emitNone (events.js:72:20)
+    at WriteStream.emit (events.js:166:7)
+    at finishMaybe (_stream_writable.js:468:14)
+    at afterWrite (_stream_writable.js:347:3)
+    at onwrite (_stream_writable.js:337:7)
+    at WritableState.onwrite (_stream_writable.js:89:5)
+error: Forever detected script exited with code: 1
+error: Script restart attempt #1
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+/home/ubuntu/node_modules/express/lib/express.js:107
+      throw new Error('Most middleware (like ' + name + ') is no longer bundled with Express and must be installed separately. Please see https://github.com/senchalabs/connect#middleware.');
+      ^
+
+Error: Most middleware (like bodyParser) is no longer bundled with Express and must be installed separately. Please see https://github.com/senchalabs/connect#middleware.
+    at Function.Object.defineProperty.get (/home/ubuntu/node_modules/express/lib/express.js:107:13)
+    at Object.<anonymous> (/home/ubuntu/app.js:25:16)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Function.Module.runMain (module.js:442:10)
+    at startup (node.js:136:18)
+    at node.js:966:3
+error: Forever detected script exited with code: 1
