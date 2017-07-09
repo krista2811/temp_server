@@ -7,7 +7,17 @@ var fs = require('fs');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
-
+app.get('/:fname', function(req, res) {
+		res.render('index', {
+			fName: req.params.fname
+		});
+});
+app.get('/img/:fname', function(req, res){
+		fs.readFile(req.params.fname, function(err, data) {
+				res.writeHead(200, {'Content-Type': 'text/html' });
+				res.end(data);
+		});
+});
 var server = app.listen(3000, function() {
 		console.log("Express server has started on port 3000");
 });
@@ -22,4 +32,3 @@ secret: '@#@$MYSIGN#@$#$',
 			saveUninitialized: true
 			}));
 
-var router = require('./router/main') (app, fs);
