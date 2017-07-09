@@ -62,5 +62,25 @@ PUT ('/api/contacts/:facebook_key)
 `{message: "contact updated"}`
 * SHOULD NOT USE DIFFERENT contactID
 
+POST (./api/photo/:facebook_key)
+* require:  
+form-data  
+name: "userfile"  
+filename: String  
+Content-Type: image/jpeg  
+* response: 
+'{message: "All done"}`  
+*post one file to server.
 
-
+DELETE (./api/photos/:facebook_key)  
+* require:
+```
+[
+	{
+		"_id": String
+	}
+	...
+]
+```
+* response:  
+`{"results": 1}`  
