@@ -70,8 +70,23 @@ filename: String
 Content-Type: image/jpeg  
 * response: 
 '{message: "All done"}`  
-*post one file to server.
+*post one file to server.  
 
+GET (./api/photos/:facebook_key)  
+* require:
+* response:
+```
+[
+	{
+		"_id": String,
+		"facebook_key": String,
+		"photoName": String,
+		"photoDir": String,
+		"thumbDir": String
+	}
+	...
+]
+```  
 DELETE (./api/photos/:facebook_key)  
 * require:
 ```
