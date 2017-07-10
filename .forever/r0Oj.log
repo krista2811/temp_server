@@ -1,0 +1,22 @@
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+Express server has started on port 1234
+Connected to mongod server
+TypeError: Cannot read property 'originalname' of undefined
+    at /home/ubuntu/router/index.js:116:31
+    at Layer.handle [as handle_request] (/home/ubuntu/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/node_modules/express/lib/router/route.js:137:13)
+    at multerMiddleware (/home/ubuntu/node_modules/multer/lib/make-middleware.js:18:41)
+    at Layer.handle [as handle_request] (/home/ubuntu/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/ubuntu/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/node_modules/express/lib/router/index.js:281:22
+    at param (/home/ubuntu/node_modules/express/lib/router/index.js:354:14)
+    at param (/home/ubuntu/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/home/ubuntu/node_modules/express/lib/router/index.js:410:3)
+    at next (/home/ubuntu/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/home/ubuntu/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/home/ubuntu/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ubuntu/node_modules/express/lib/router/index.js:317:13)
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+error: Forever detected script was killed by signal: SIGKILL
