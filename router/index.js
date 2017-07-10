@@ -110,7 +110,7 @@ module.exports = function(app,Contact, Photo) {
 		}
 	})
 	var upload = multer({ storage: storage });
-	app.post('/api/photos/:facebook_key', upload.single("userfile"), function(req, res)
+	app.post('/api/photo/:facebook_key', upload.single("userfile"), function(req, res)
 			{
 				var photo = new Photo();
 				photo.photoName = req.file.originalname;
@@ -125,7 +125,25 @@ module.exports = function(app,Contact, Photo) {
 			res.json({message:"All done"});
 			return;
 
-	});			
+	});		
+	app.post('/api/photos/:facebook_key', upload.array("userfile"),
+			function(req, res) {
+
+			console.log(req.files);
+			for(photoID in req.files) {
+				var photo = new Photo();
+				photo.photoName = req.files[photoID].originalname;
+				photo.photoDir = req.files[photoID].path;
+				photo.thumbDir = req.files[photoID].path;
+				photo.facebook_key = req.params.facebook_key;
+				photo.save(function(err, data) {
+						if(err) {
+							return res.status(500).send({error: 'db failure'});
+						}
+				});
+			}
+			res.json({message: "All done"});
+	});
 	app.get('/api/photos/:facebook_key', function(req, res) {
 		Photo.find({facebook_key: req.params.facebook_key}, function(err, data) {
 				if(err){
