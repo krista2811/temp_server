@@ -69,8 +69,18 @@ name: "userfile"
 filename: String  
 Content-Type: image/jpeg  
 * response: 
-'{message: "All done"}`  
-*post one file to server.  
+`{message: "All done"}`  
+* post one file to server.  
+
+POST (./api/photos/:facebook_key)
+* require:  
+form-data files  
+name: "userfile"  
+filename: String  
+Content-Type: image/jpeg  
+* response: 
+`{message: "All done"}`  
+* post multiple file to server. 
 
 GET (./api/photos/:facebook_key)  
 * require:
